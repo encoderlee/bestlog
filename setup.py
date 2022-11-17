@@ -6,7 +6,7 @@ with open("README.md", "r") as file:
 
 setuptools.setup(
     name="bestlog",
-    version="1.0.0",
+    version="1.2",
     author="encoderlee",
     author_email="encoderlee@gmail.com",
     description="a simple python logger that logs to file and stdout",
