@@ -1,0 +1,7 @@
+__pycache__
+.idea
+/*.bat
+/bestlog.egg-info
+/build
+/dist
+/test.py
