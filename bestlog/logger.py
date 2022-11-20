@@ -6,6 +6,7 @@ import os
 
 default_log_level = logging.INFO
 default_log_path = "./logs"
+default_backup_days = 0
 
 
 def get(loger_name, tag = "default") -> logging.LoggerAdapter:
@@ -15,12 +16,14 @@ def get(loger_name, tag = "default") -> logging.LoggerAdapter:
 
 
 def init(loger_name: str, tag: bool = False, to_stdout: bool = True, to_file: bool = True, log_path: str = None,
-         log_level: int = None, backup_days: int = 0):
+         log_level: int = None, backup_days: int = None):
 
     if log_path is None:
         log_path = default_log_path
     if log_level is None:
         log_level = default_log_level
+    if backup_days is None:
+        backup_days = default_backup_days
     logging.getLogger(loger_name).setLevel(log_level)
 
     if to_stdout:

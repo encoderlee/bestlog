@@ -1,5 +1,5 @@
 # bestlog
-![version](https://img.shields.io/badge/version-1.2-blue)
+![version](https://img.shields.io/badge/version-1.2.1-blue)
 ![license](https://img.shields.io/badge/license-MIT-brightgreen)
 ![python_version](https://img.shields.io/badge/python-%3E%3D%203.5-brightgreen)
 ![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
@@ -44,6 +44,7 @@ import logging
 
 logger.default_log_path = "/var/log/test/"
 logger.default_log_level = logging.DEBUG
+logger.default_backup_days = 30
 
 log = logger.get("test")
 
@@ -51,7 +52,7 @@ def main():
     log.debug("what the fuck")
 
 if __name__ == '__main__':
-    logger.init("test", backup_days = 30)
+    logger.init("test")
     main()
 ```
 you can specify the path to save the log file
